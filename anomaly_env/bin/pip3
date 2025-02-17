@@ -1,4 +1,4 @@
-#!/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/anomaly_env/bin/python
+#!/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/anomaly_env/bin/python3.9
 # -*- coding: utf-8 -*-
 import re
 import sys

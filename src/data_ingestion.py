@@ -8,7 +8,7 @@ from tqdm import tqdm
 file_path = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/mvtec_anomaly_detection.tar.xz")
 dataset_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/raw")
 processed_images_output_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/processed")
-processed_images_output_dir.mkdir(parent = True, exists_ok = True)
+processed_images_output_dir.mkdir(parents = True, exist_ok = True)
 
 # image size
 image_size = (256, 256)
@@ -40,22 +40,24 @@ def image_2_array(folder):
 
 def process_dataset():
     """Function"""
-    categories = os.listdir(dataset_dir)
+    # categories = os.listdir(dataset_dir)
+    bottle_data = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/raw/bottle")
 
-    for category in categories:
-        if category == "bottle":
-            category_path = dataset_dir / category / "train/good"
 
-            if category_path.exists():
-                print(f"Processing {category}...")
-                images = image_2_array(category_path)
-                print("Process Successfull for {category}.")
+    # for category in categories:
+    # category_path = dataset_dir / category / "train/good"
+    category_path = bottle_data / "train/good"
 
-                # saving numpy array as .npy file for faster access
-                np.save(processed_images_output_dir / f"{category}_train.npy", images)
-                print(f"Saved: {category}_train.npy at {processed_images_output_dir}")
-        else:
-            print(f"bottle dataset not found.") 
+    if category_path.exists():
+        # print(f"Processing {category}...")
+        print(f"Processing bottle...")
+        images = image_2_array(category_path)
+        print(f"Process Successfull for bottle.")
+
+        # saving numpy array as .npy file for faster access
+        np.save(processed_images_output_dir / f"bottle_train.npy", images)
+        print(f"Saved: bottle_train.npy at {processed_images_output_dir}")
+        
 
 
 def main():
