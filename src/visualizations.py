@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-import cv2
 from tqdm import tqdm
 from pathlib import Path
 
@@ -16,10 +14,14 @@ def load_and_visualize(category):
         print(f"file {category} not found. Run Data Ingestion first!!\n")
         return
 
-    print("File Found! Visualizing Process Started...\n")
+    print("File Found!")
 
-    # Load images
-    images = np.load(file_path)
+    # Load images and wraping it with tqdm to display progress bar
+    with tqdm(total = 1, desc = "Loading Data", unit = "file") as pbar:
+        images = np.load(file_path)
+        pbar.update(1) # Mark as completed
+    
+    print("Loading Complete! Visualization Process Started...\n")
 
     # Generating Random Indices value for selection of random images
     random_indices = np.random.choice(len(images), size = 5, replace = False)
@@ -33,7 +35,6 @@ def load_and_visualize(category):
 
 def main():
     load_and_visualize("bottle") # add a for loop for visualizaing images of all folders!
-
 
 if __name__ == "__main__":
     main()
