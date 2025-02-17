@@ -32,7 +32,7 @@ def load_and_visualize(category):
     plt.show()
 
 def main():
-    load_and_visualize("bottle") # add a for loop for visualizaing images of all folders
+    load_and_visualize("bottle") # add a for loop for visualizaing images of all folders!
 
 
 if __name__ == "__main__":
