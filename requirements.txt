@@ -4,7 +4,9 @@ matplotlib
 tqdm
 pillow
 pathlib
+tensorflow
 scikit-image
+scikit-learn
 torch
 torchvision
 opencv-contrib-python
