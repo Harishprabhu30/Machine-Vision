@@ -1,0 +1,15 @@
+paths:  
+  zip_file: "data/"
+  dataset_dir: "data/raw/"
+  processed_data: "data/processed/"
+  logs: "monitoring/logs/"
+
+dataset:
+  categories: ["bottle"]
+
+features:
+  image_size: [256, 256]
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(levelname)s - %(message)s"

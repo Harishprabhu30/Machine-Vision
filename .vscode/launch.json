@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Main",
+        "type": "python",
+        "request": "launch",
+        "program": "/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/main.py",  
+        "pythonPath": "/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/anomaly_env/bin/python",  
+        
+        "env": {
+          "PYTHONPATH": "/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/src"  
+        },
+        "console": "integratedTerminal",
+        "cwd": "/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision"
+      }
+    ]
+}

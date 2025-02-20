@@ -1,6 +1,8 @@
+pyyaml
 pandas
 numpy
 matplotlib
+seaborn
 tqdm
 pillow
 pathlib
@@ -10,4 +12,3 @@ scikit-learn
 torch
 torchvision
 opencv-contrib-python
-seaborn
