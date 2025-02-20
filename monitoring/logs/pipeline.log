@@ -1,8 +1,43 @@
-2025-02-20 12:20:56,617 - INFO - Starting full ML pipeline...
-2025-02-20 12:20:57,568 - INFO - Starting Data Ingestion.
-2025-02-20 12:20:57,571 - INFO - Zip File Extracted Already. Good to go!
-2025-02-20 12:20:57,572 - INFO - Processing bottle.
-2025-02-20 12:21:01,866 - INFO - Process Successful for bottle.
-2025-02-20 12:21:02,049 - INFO - Saved: bottle_train.npy at data/processed
-2025-02-20 12:21:02,052 - INFO -  Data Ingestion Successful.
-2025-02-20 12:21:02,660 - INFO - ML pipeline completed.
+2025-02-20 13:10:20,483 - INFO - Starting full ML pipeline...
+2025-02-20 13:10:20,749 - INFO - Starting Data Ingestion.
+2025-02-20 13:10:20,749 - INFO - Zip File Extracted Already. Good to go!
+2025-02-20 13:10:20,749 - INFO - Processing bottle.
+2025-02-20 13:10:24,562 - INFO - Process Successful for bottle.
+2025-02-20 13:10:24,790 - INFO - Saved: bottle_train.npy at data/processed
+2025-02-20 13:10:24,794 - INFO -  Data Ingestion Successful.
+2025-02-20 13:10:25,545 - INFO - Starting Visualizations.
+2025-02-20 13:10:28,361 - INFO -  Visualization Successful.
+2025-02-20 13:10:28,505 - INFO - ML pipeline completed.
+2025-02-20 13:11:01,990 - INFO - Starting full ML pipeline...
+2025-02-20 13:11:02,265 - INFO - Starting Data Ingestion.
+2025-02-20 13:11:02,265 - INFO - Zip File Extracted Already. Good to go!
+2025-02-20 13:11:02,266 - INFO - Processing bottle.
+2025-02-20 13:11:06,280 - INFO - Process Successful for bottle.
+2025-02-20 13:11:06,389 - INFO - Saved: bottle_train.npy at data/processed
+2025-02-20 13:11:06,392 - INFO -  Data Ingestion Successful.
+2025-02-20 13:11:07,279 - INFO - Starting Visualizations.
+2025-02-20 13:11:10,202 - INFO -  Visualization Successful.
+2025-02-20 13:11:10,378 - INFO - ML pipeline completed.
+2025-02-20 13:11:46,634 - INFO - Starting full ML pipeline...
+2025-02-20 13:11:47,416 - INFO - Starting Visualizations.
+2025-02-20 13:11:50,139 - INFO -  Visualization Successful.
+2025-02-20 13:11:50,284 - INFO - ML pipeline completed.
+2025-02-20 13:12:34,874 - INFO - Starting full ML pipeline...
+2025-02-20 13:12:35,562 - INFO - Starting Visualizations.
+2025-02-20 13:12:35,563 - INFO -  Visualization Successful.
+2025-02-20 13:12:35,671 - INFO - ML pipeline completed.
+2025-02-20 13:20:16,828 - INFO - Starting full ML pipeline...
+2025-02-20 13:20:17,515 - INFO - Starting Visualizations.
+2025-02-20 13:20:17,515 - INFO - bottle_train.npy not found. Run Data Ingestion first!!
+2025-02-20 13:20:17,653 - INFO - ML pipeline completed.
+2025-02-20 13:21:20,822 - INFO - Starting full ML pipeline...
+2025-02-20 13:21:21,110 - INFO - Starting Data Ingestion.
+2025-02-20 13:21:21,110 - INFO - Zip File Extracted Already. Good to go!
+2025-02-20 13:21:21,111 - INFO - Processing bottle.
+2025-02-20 13:21:25,304 - INFO - Process Successful for bottle.
+2025-02-20 13:21:25,502 - INFO - Saved: bottle_train.npy at data/processed
+2025-02-20 13:21:25,506 - INFO -  Data Ingestion Successful.
+2025-02-20 13:21:26,464 - INFO - Starting Visualizations.
+2025-02-20 13:21:26,464 - INFO - bottle_train.npy found. Loading.
+2025-02-20 13:21:26,570 - INFO - Loading Complete! Visualization Process Started.
+2025-02-20 13:21:29,139 - INFO - ML pipeline completed.

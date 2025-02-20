@@ -1,11 +1,19 @@
+import os
+import sys
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-
 from pathlib import Path
 from skimage.feature import hog
 
-processed_image_array_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/processed/")
+# Get the root directory and add it to sys.path
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(ROOT_DIR)
+from src.logger import logger  # Now it should work
+from src import config
+
+# processed_image_array_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/processed/")
+processed_image_array_dir = Path(config['paths']['processed_data'])
 
 def load_image_array(category, num_images = 5):
     """Function loads the .npy file"""
@@ -13,17 +21,22 @@ def load_image_array(category, num_images = 5):
     file_path = processed_image_array_dir / f"{category}_train.npy"
     if not file_path.exists():
         print(f"File Not Found at {file_path}. Run Data Ingestion First.")
+        logger.info(f"{category}_train.npy Not Found at {file_path}. Run Data Ingestion First.")
+
         return
 
-    print(f"File Found! Loading...\n")
+    print(f"File Found at {file_path}! Loading...\n")
+    logger.info(f"{category}_train.npy Found at {file_path}. Loading Started.")
 
     images = np.load(file_path)
+    logger.info(f"{category}_train.npy successfully converted to image arrays.")
     return images[: num_images]
 
 # Exploring Traditional Methods for Feature Extraction
 # -- (A) HISTOGRAM OF PIXEL INTENSITIES --
 def plot_histogram(images):
     """plots histogram for colors mentioned in a list."""
+
     color_channel = ['r', 'g', 'b']
     plt.figure(figsize = (10, 5))
     for i, col in enumerate(color_channel):
@@ -114,7 +127,11 @@ def plot_orb(images):
     return keypoints, descriptors
 
 def main():
-    images = load_image_array("bottle", num_images = 1)
+    
+    logger.info("Starting Traditional Feature Engineering.")
+    print("-------- Starting Traditional Feature Engineering --------")
+    categories = config['dataset']['categories']
+    images = load_image_array(categories, num_images = 1)
     if images is not None:
         for img in images:
             plot_histogram(img)
@@ -129,9 +146,13 @@ def main():
             print(f"ORB Descriptor Shape: {orb_descriptors.shape}")
 
         
+        logger.info("Traditional Feature Engineering Successful.")
+
         return
 
     print("Images Failed to load.\n")
+    logger.info("Traditional Feature Engineering Failed (Images Failed to load).")
+
 
 
 if __name__ == "__main__":

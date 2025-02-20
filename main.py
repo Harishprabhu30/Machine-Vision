@@ -8,7 +8,9 @@ logger.info("Starting full ML pipeline...")
 
 # Run each stage sequentially
 subprocess.run(["python", "scripts/data_ingestion.py"])
-# # subprocess.run(["python", "scripts/feature_extraction.py"])
+subprocess.run(["python", "scripts/visualizations.py"])
+# subprocess.run(["python", "scripts/traditional_feature_engineering.py"])
+# subprocess.run(["python", "scripts/dnn_feature_engineering.py"])
 # # subprocess.run(["python", "scripts/train.py"])
 # # subprocess.run(["python", "scripts/evaluate.py"])
 

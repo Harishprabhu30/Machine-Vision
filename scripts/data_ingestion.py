@@ -16,11 +16,8 @@ from src.logger import logger  # Now it should work
 from src import config
 
 
-# zip_file_path = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/mvtec_anomaly_detection.tar.xz")
 zip_file_path = Path(config['paths']['zip_file'])
-# dataset_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/raw")
 dataset_dir = Path(config['paths']['dataset_dir'])
-# processed_images_output_dir = Path("/Users/harishprabhu/Desktop/Machine_Vision/Machine-Vision/data/processed")
 processed_images_output_dir = Path(config['paths']['processed_data'])
 processed_images_output_dir.mkdir(parents = True, exist_ok = True)
 
@@ -38,7 +35,7 @@ def extract_dataset():
         logger.info(f"Zip File Extraction Successful.")
 
     else:
-        print("Dataset already exists.\n")
+        print("Dataset already exists.")
         logger.info(f"Zip File Extracted Already. Good to go!")
 
 
@@ -81,11 +78,11 @@ def process_dataset(categories):
 
 def main():
     
-    categories = config['dataset']['categories']
-
     # Calling defined functions
     logger.info("Starting Data Ingestion.")
+    print("-------- Starting Data Ingestion --------")
     extract_dataset()
+    categories = config['dataset']['categories']
     process_dataset(categories)
     logger.info(" Data Ingestion Successful.")
 
