@@ -70,7 +70,7 @@ def process_dataset(categories):
             print(f"Processing {category}...")
             logger.info(f"Processing {category}.")
             images = image_2_array(category_path)
-            print(f"Process Successful for {category}.\n")
+            print(f"Process Successful for {category}.")
             logger.info(f"Process Successful for {category}.")
 
             # saving numpy array as .npy file for faster access

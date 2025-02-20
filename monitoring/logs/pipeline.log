@@ -1,0 +1,8 @@
+2025-02-20 12:20:56,617 - INFO - Starting full ML pipeline...
+2025-02-20 12:20:57,568 - INFO - Starting Data Ingestion.
+2025-02-20 12:20:57,571 - INFO - Zip File Extracted Already. Good to go!
+2025-02-20 12:20:57,572 - INFO - Processing bottle.
+2025-02-20 12:21:01,866 - INFO - Process Successful for bottle.
+2025-02-20 12:21:02,049 - INFO - Saved: bottle_train.npy at data/processed
+2025-02-20 12:21:02,052 - INFO -  Data Ingestion Successful.
+2025-02-20 12:21:02,660 - INFO - ML pipeline completed.
